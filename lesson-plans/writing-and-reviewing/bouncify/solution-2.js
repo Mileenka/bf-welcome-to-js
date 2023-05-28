@@ -23,3 +23,51 @@
       '0 . x . 0'         -> '0 . X . 0'
 
 */
+
+'use strict';
+
+/* Bouncify */
+
+const bouncifyText = (text) => {
+  let bouncified = '';
+  let count = 0;
+
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+
+    if (/[a-zA-Z]/.test(char)) {
+      if (count % 2 === 0) {
+        bouncified += char.toUpperCase();
+      } else {
+        bouncified += char.toLowerCase();
+      }
+      count++;
+    }
+  }
+
+  return bouncified;
+};
+
+/* Test cases */
+
+const testCases = [
+  { input: 'a', expected: 'A' },
+  { input: 'Hello', expected: 'HeLlO' },
+  { input: 'HELLO', expected: 'HeLlO' },
+  { input: 'cheese', expected: 'ChEeSe' },
+  { input: 'good bye', expected: 'GoOd ByE' },
+  { input: ' row a boat ', expected: ' RoW a BoAt ' },
+  { input: '12 Good Byes!', expected: '12 GoOd ByEs!' },
+  { input: 'h1! Hoe gaat het?', expected: 'H1! hOe GaAt HeT?' },
+  { input: '0 . x . 0', expected: '0 . X . 0' }
+];
+
+for (const testCase of testCases) {
+  const { input, expected } = testCase;
+  const result = bouncifyText(input);
+
+  console.log(`Input: ${input}`);
+  console.log(`Expected: ${expected}`);
+  console.log(`Result: ${result}`);
+  console.log('---');
+}

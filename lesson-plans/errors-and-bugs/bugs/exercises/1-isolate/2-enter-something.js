@@ -9,9 +9,9 @@
     'JavaScript' -> 'you entered "JavaScript"'
 
   experiment 1
-    line:
-    why:
-    trying:
+    line: 9
+    why: To prompt the user to enter something and store the input in the `input` variable.
+    trying: To capture user input using the `prompt` function.
 
 */
 
@@ -19,9 +19,13 @@ let message = '';
 
 let input = null;
 while (input === null || input.length === 0) {
-  const input = prompt('enter something');
+  input = prompt('Enter something');
 
-  message = 'you entered "' + input + '"';
+  if (input === ' ') {
+    message = 'you entered " "';
+  } else {
+    message = 'you entered "' + input + '"';
+  }
 }
 
 alert(message);
