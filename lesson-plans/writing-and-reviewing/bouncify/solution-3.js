@@ -23,3 +23,57 @@
       '0 . x . 0'         -> '0 . X . 0'
 
 */
+
+'use strict';
+
+/* Bouncify */
+
+// Function to bouncify the text
+const bouncifyText = (text) => {
+  let bouncified = ''; // Variable to store the bouncified text
+  let count = 0; // Variable to keep track of the number of letters encountered
+
+  // Iterate through each character in the text
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i]; // Get the current character
+
+    // Check if the character is a letter
+    if (/[a-zA-Z]/.test(char)) {
+      if (count % 2 === 0) {
+        // If the count is even, convert the letter to uppercase
+        bouncified += char.toUpperCase();
+      } else {
+        // If the count is odd, convert the letter to lowercase
+        bouncified += char.toLowerCase();
+      }
+      count++; // Increment the count after encountering a letter
+    }
+  }
+
+  return bouncified; // Return the bouncified text
+};
+
+/* Test cases */
+
+const testCases = [
+  { input: 'a', expected: 'A' },
+  { input: 'Hello', expected: 'HeLlO' },
+  { input: 'HELLO', expected: 'HeLlO' },
+  { input: 'cheese', expected: 'ChEeSe' },
+  { input: 'good bye', expected: 'GoOd ByE' },
+  { input: ' row a boat ', expected: ' RoW a BoAt ' },
+  { input: '12 Good Byes!', expected: '12 GoOd ByEs!' },
+  { input: 'h1! Hoe gaat het?', expected: 'H1! hOe GaAt HeT?' },
+  { input: '0 . x . 0', expected: '0 . X . 0' }
+];
+
+// Run the test cases
+for (const testCase of testCases) {
+  const { input, expected } = testCase;
+  const result = bouncifyText(input);
+
+  console.log(`Input: ${input}`);
+  console.log(`Expected: ${expected}`);
+  console.log(`Result: ${result}`);
+  console.log('---');
+}

@@ -11,20 +11,20 @@ console.log('--- in execution phase ---');
   name:
   message:
 
-  location:
+  location: line 27
 
-  life cycle:
+  life cycle: This section describes the life cycle of the error, which typically refers to the stages of detection, debugging, and resolution.
 
-  the mistake:
+  the mistake: else
 
-  the fix(es):
+  the fix(es): else if
 */
 
 let userName = 'indrogo';
 
 if (userName.length < 3) {
   console.log('too short');
-} else (userName.length < 5) {
+} else if(userName.length < 5) {
   console.log('just right');
 } else {
   console.log('too long');
