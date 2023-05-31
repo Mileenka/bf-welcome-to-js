@@ -1,27 +1,22 @@
-
-
 'use strict';
 
 console.log('--- in execution phase ---');
 
-
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: SyntaxError
+  message: Invalid left-hand side in assignment
 
-  location:
+  location: 22
 
-  life cycle:
+  life cycle: Execution phase
 
-  the mistake:
+  the mistake: value before variable
 
-  the fix(es):
+  the fix(es): variable before the value
 */
 
 let isHappy = false;
 
-true = isHappy;
-
-
+isHappy = true;

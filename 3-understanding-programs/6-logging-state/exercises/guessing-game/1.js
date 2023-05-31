@@ -67,6 +67,8 @@ if (userInput === '-h') {
         );
       }
 
+      console.log(guess);
+
       if (guess === null) {
         alert('good bye');
       } else if (guess === secretPhrase) {
@@ -78,7 +80,6 @@ if (userInput === '-h') {
         const revealTheSecret = confirm(
           'Nope, not correct. \n\ndo you want to know the secret?',
         );
-
         if (revealTheSecret) {
           alert(
             'The secret was:\n\n' +
@@ -88,7 +89,8 @@ if (userInput === '-h') {
               '"' +
               '\n\n' +
               'thanks for playing, see ya',
-          );
+          ); 
+          console.log(secretPhrase);
         } else {
           alert('better luck next time');
         }
@@ -96,6 +98,7 @@ if (userInput === '-h') {
     }
   }
   alert('game over. the winner is: ' + winner);
+  console.log(winner);
 } else if (userInput === null) {
   alert('good bye');
 } else {

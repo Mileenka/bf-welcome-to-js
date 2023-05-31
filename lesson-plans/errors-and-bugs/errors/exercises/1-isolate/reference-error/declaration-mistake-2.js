@@ -3,13 +3,17 @@
 console.log('--- in execution phase ---');
 
 /*
-  environment:
+  environment: chrome
 
   name: ReferenceError
   message: isValidUserName is not defined
-  location: Line 24
-  life cycle: Creation phase -> Execution phase
+
+  location: Line 23
+
+  life cycle: Execution phase
+
   the mistake: Using isValidUserName before it is declared
+
   the fix(es): Declare the isValidUserName variable before using it in the if statement
 */
 
@@ -21,7 +25,6 @@ let isValidUserName;
 if (userName.length > 3) {
   isValidUserName = true; // ReferenceError: isValidUserName is not defined
 }
-
 
 if (userName.length <= 3) {
   isValidUserName = false;

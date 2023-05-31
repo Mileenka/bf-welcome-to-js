@@ -1,33 +1,28 @@
-
-
 'use strict';
 
 console.log('--- in execution phase ---');
 
-
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: syntaxError
+  message: unexpected token '{'
 
   location: line 27
 
-  life cycle: This section describes the life cycle of the error, which typically refers to the stages of detection, debugging, and resolution.
+  life cycle: Execution phase
 
-  the mistake: else
+  the mistake: using else two times
 
-  the fix(es): else if
+  the fix(es): add else if instead else
 */
 
 let userName = 'indrogo';
 
 if (userName.length < 3) {
   console.log('too short');
-} else if(userName.length < 5) {
+} else if (userName.length < 5) {
   console.log('just right');
 } else {
   console.log('too long');
 }
-
-

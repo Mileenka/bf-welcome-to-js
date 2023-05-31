@@ -9,9 +9,9 @@
 
 
   experiment 1
-    line: 9
-    why: To prompt the user to enter some text and store it in the `text` variable.
-    trying: To capture user input using the `prompt` function and assign it to the `text` variable.
+    line: 25
+    why: the test case is not working
+    trying: to excited add excited + character + !
 */
 
 let text = null;
@@ -21,7 +21,9 @@ while (text === null) {
 
 let excited = '';
 for (const character of text) {
+
   excited += character + '!';
+
 }
 
 alert(excited);
