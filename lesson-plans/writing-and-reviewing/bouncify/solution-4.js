@@ -24,56 +24,43 @@
 
 */
 
-'use strict';
-
-/* Bouncify */
-
-// Function to bouncify the text
-const bouncifyText = (text) => {
-  let bouncified = ''; // Variable to store the bouncified text
-  let letterCount = 0; // Variable to keep track of the number of letters encountered
-
-  // Iterate through each character in the text
-  for (let i = 0; i < text.length; i++) {
-    const char = text[i]; // Get the current character
-
-    // Check if the character is a letter
-    if (/[a-zA-Z]/.test(char)) {
-      if (letterCount % 2 === 0) {
-        // If the letter count is even, convert the letter to uppercase
-        bouncified += char.toUpperCase();
-      } else {
-        // If the letter count is odd, convert the letter to lowercase
-        bouncified += char.toLowerCase();
-      }
-      letterCount++; // Increment the letter count after encountering a letter
-    }
+let message = '';
+while (true) {
+  // in case null
+  const userInput = prompt('Please enter something : ');
+  if (userInput === null) {
+    alert('there is no escape!');
+    continue;
   }
-
-  return bouncified; // Return the bouncified text
-};
-
-/* Test cases */
-
-const testCases = [
-  { input: 'a', expected: 'A' },
-  { input: 'Hello', expected: 'HeLlO' },
-  { input: 'HELLO', expected: 'HeLlO' },
-  { input: 'cheese', expected: 'ChEeSe' },
-  { input: 'good bye', expected: 'GoOd ByE' },
-  { input: ' row a boat ', expected: ' RoW a BoAt ' },
-  { input: '12 Good Byes!', expected: '12 GoOd ByEs!' },
-  { input: 'h1! Hoe gaat het?', expected: 'H1! hOe GaAt HeT?' },
-  { input: '0 . x . 0', expected: '0 . X . 0' }
-];
-
-// Run the test cases
-for (const testCase of testCases) {
-  const { input, expected } = testCase;
-  const result = bouncifyText(input);
-
-  console.log(`Input: ${input}`);
-  console.log(`Expected: ${expected}`);
-  console.log(`Result: ${result}`);
-  console.log('---');
+  // in case empty string
+  if (userInput === '') {
+    alert('no empty string allowed');
+    continue;
+  }
+  // if userInput
+  if (userInput) {
+    message = userInput;
+    break;
+  }
 }
+
+// Loop throw message
+let newMessage = '';
+let isUpperCase = true;
+
+let spcial = ' 0123456789!?.&*$#';
+for (const char of message) {
+  if (spcial.indexOf(char) === -1) {
+    if (isUpperCase) {
+      newMessage += char.toUpperCase();
+      isUpperCase = false;
+    } else {
+      newMessage += char.toLowerCase();
+      isUpperCase = true;
+    }
+  } else {
+    newMessage += char;
+  }
+}
+
+alert(newMessage);

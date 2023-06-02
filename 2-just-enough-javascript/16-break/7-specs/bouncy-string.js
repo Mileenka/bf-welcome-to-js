@@ -26,6 +26,7 @@
 
 console.log('--- begin program ---');
 
+
 /* --- gather user input --- */
 
 let input = null;
@@ -40,7 +41,7 @@ while (true) {
   let invalidInput = false;
   for (let i = 0; i < input.length; i++) {
     let char = input[i];
-    if (!/[a-zA-Z]/.test(char)) {
+    if (!((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z'))) {
       invalidInput = true;
       break; // Invalid input, prompt again
     }
