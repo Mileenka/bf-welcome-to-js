@@ -5,35 +5,26 @@
 /*
 
 
-  Data In:
+  Data In: let
 
-  Data Out:
+  Data Out: 
 
   Test Cases:
 
 */
 
-/* ---   ?   --- */
+const input = prompt('do whatever you want');
 
-// input <- prompt('do whatever you want')
+let message = 'your input is ';
 
-/* ---   ?   --- */
+if (input === null) {
+  message = message + 'null';
+} else {
+  maybeNot = '';
+  if (input.length !== 0) {
+    maybeNot = 'not ';
+  }
+  message = message + maybeNot + 'empty';
+}
 
-// message <- 'your input is '
-
-// IF: input === null
-/* ---   ?   --- */
-//   message <- message + 'null'
-// ELSE:
-/* ---   ?   --- */
-//   maybeNot <- ''
-//   IF: input.length !== 0
-/* ---   ?   --- */
-//     maybeNot <- 'not '
-//   :END IF
-//   message <- message + maybeNot + 'empty'
-// :END IF
-
-/* ---   ?   --- */
-
-// alert(message)
+alert(message);
