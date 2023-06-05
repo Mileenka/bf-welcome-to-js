@@ -32,6 +32,7 @@
     "no-unused-expressions": 1,
     "no-useless-computed-key": 1,
     "no-useless-rename": 1,
+    "linebreak-style": ["error", "windows"],
     "no-label-var": 1,
     "no-shadow": 1,
     "no-undefined": 1,
