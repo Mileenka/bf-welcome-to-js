@@ -6,9 +6,10 @@
     - User input (string)
 
   Data Out:
-    - Alert message (string)
+    - Alert message is this correct? "blue"
+    - Alert your favorite color is blue
 
-  Test Cases:
+  Test Cases: 'blue'
 
 */
 

@@ -12,7 +12,7 @@
 
 */
 
-/* ---   ?   --- */
+/* --- Get user input --- */
 
 let input = null;
 
@@ -22,7 +22,7 @@ while (input === null) {
   );
 }
 
-/* ---   ?   --- */
+/* --- Check if input has no spaces --- */
 
 let noSpaces = true;
 
@@ -33,7 +33,7 @@ for (let letter of input) {
   }
 }
 
-/* ---   ?   --- */
+/* --- Create message based on the presence of spaces --- */
 
 let message = '';
 
@@ -43,6 +43,6 @@ if (noSpaces) {
   message = '"' + input + '" has at least one space';
 }
 
-/* ---   ?   --- */
+/* --- Display the message --- */
 
 alert(message);

@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -10,6 +8,14 @@
   Data Out: 
 
   Test Cases:
+    Data In: 'hello'
+    Data Out: your input is not empty
+
+    Data In: ''
+    Data Out: your input is empty
+
+    Data In: null
+    Data Out: your input is null
 
 */
 
@@ -20,7 +26,7 @@ let message = 'your input is ';
 if (input === null) {
   message = message + 'null';
 } else {
-  maybeNot = '';
+  let maybeNot = '';
   if (input.length !== 0) {
     maybeNot = 'not ';
   }

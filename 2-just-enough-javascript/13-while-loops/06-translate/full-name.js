@@ -9,7 +9,7 @@
   Data Out:
     - Alert with the full name (string)
 
-  Test Cases: Milena Wasowicz 
+  Test Cases: Milena Wasowicz --> Milena Wasowicz
 
 */
 

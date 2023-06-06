@@ -6,9 +6,9 @@
     - User input (string)
 
   Data Out:
-    - Alert message (string)
+    - Alert message (string) 
 
-  Test Cases: 
+  Test Cases: hack your future --> 'Thank you for something!'
 
 */
 

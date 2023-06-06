@@ -62,3 +62,12 @@ alert(
     'case sensitive: ' +
     caseSensitive,
 );
+
+// Logging invalid inputs
+
+if (invalidInputs.length > 0) {
+  console.log('Invalid inputs:');
+  for (let i = 0; i < invalidInputs.length; i++) {
+    console.log(invalidInputs[i]);
+  }
+}
