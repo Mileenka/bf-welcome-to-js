@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -14,9 +12,6 @@
 
 */
 
-/* ---   ?   --- */
-
-'use strict';
 
 /* --- gather user input --- */
 
