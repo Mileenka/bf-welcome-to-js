@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -49,6 +47,7 @@ if (phraseIncludesQuery) {
   doesOrNot = 'does';
 } else {
   doesOrNot = 'does not';
+  console.log(`Invalid query inputs: ${query}`);
 }
 
 alert(
@@ -63,11 +62,6 @@ alert(
     caseSensitive,
 );
 
-// Logging invalid inputs
+// // Logging invalid inputs
 
-if (invalidInputs.length > 0) {
-  console.log('Invalid inputs:');
-  for (let i = 0; i < invalidInputs.length; i++) {
-    console.log(invalidInputs[i]);
-  }
-}
+console.log('Invalid phrase inputs:');
